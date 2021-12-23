@@ -1,0 +1,14 @@
+body
+{
+background-size: cover;
+}
+
+
+.heading{
+    width: 100%;
+}
+
+#play-button{
+    border-radius: 20px;
+}
+
