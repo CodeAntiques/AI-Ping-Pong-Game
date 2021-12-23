@@ -12,3 +12,19 @@ background-size: cover;
     border-radius: 20px;
 }
 
+
+
+.modal-dialog{
+    width: 90%;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: cadetblue;
+    height: 35px;
+    font-size: 20px;
+}
