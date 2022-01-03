@@ -1,7 +1,7 @@
 video="";
 right_wrist_x="";
 right_wrist_y="";
-score=""
+score_right_wrist="";
 
 
 /*created by prashant shukla */
@@ -54,6 +54,12 @@ function draw(){
  fill("black");
  stroke("black");
  rect(0,0,20,700);
+
+ if (score_right_wrist>0.2) {
+   fill("red");
+   stroke("red");
+   circle(right_wrist_x,right_wrist_y,20);
+ }
  
    //funtion paddleInCanvas call 
    paddleInCanvas();
@@ -90,6 +96,7 @@ function gotPoses(results){
       console.log(results);
       right_wrist_x=results[0].pose.rightWrist.x;
       right_wrist_y=results[0].pose.rightWrist.y;
+      score_right_wrist=results[0].pose.keypoints[10].score;
   }
 }  
   
