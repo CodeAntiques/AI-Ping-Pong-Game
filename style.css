@@ -33,5 +33,10 @@ background-size: cover;
 canvas{
     border-radius: 10px;
     border-color: white;
-    border: width 20px;;
+    border: width 20px;
+
+}
+
+#video_canvas{
+    margin-top: 800px;
 }
