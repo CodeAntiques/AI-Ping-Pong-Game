@@ -2,7 +2,7 @@ video="";
 right_wrist_x="";
 right_wrist_y="";
 score_right_wrist="";
-
+game_status=""
 
 /*created by prashant shukla */
 
@@ -61,6 +61,10 @@ function draw(){
    circle(right_wrist_x,right_wrist_y,20);
  }
  
+if (game_status=="start") {
+  
+}
+
    //funtion paddleInCanvas call 
    paddleInCanvas();
  
@@ -88,6 +92,11 @@ function draw(){
    
    //function move call which in very important
     move();
+}
+
+function startGame(){
+  game_status="start";
+  document.getElementById("status").innerHTML="Game is Loaded";
 }
 
 
