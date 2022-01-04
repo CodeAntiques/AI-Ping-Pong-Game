@@ -43,7 +43,9 @@ function modeloaded(){
 
 
 function draw(){
-
+  if (game_status=="start") {
+     
+ 
  background(0); 
 
  image(video,0,0,700,600);
@@ -61,9 +63,7 @@ function draw(){
    circle(right_wrist_x,right_wrist_y,20);
  }
  
-if (game_status=="start") {
-  
-}
+
 
    //funtion paddleInCanvas call 
    paddleInCanvas();
@@ -72,7 +72,7 @@ if (game_status=="start") {
    fill(250,0,0);
     stroke(0,0,250);
     strokeWeight(0.5);
-   paddle1Y = mouseY; 
+   paddle1Y = right_wrist_y; 
    rect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
    
    
@@ -92,6 +92,7 @@ if (game_status=="start") {
    
    //function move call which in very important
     move();
+  }
 }
 
 function startGame(){
@@ -99,6 +100,10 @@ function startGame(){
   document.getElementById("status").innerHTML="Game is Loaded";
 }
 
+function restart(){
+  playerscore=0;
+  pcscore=0;
+}
 
 function gotPoses(results){
   if(results.length>0){
